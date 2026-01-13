@@ -80,16 +80,21 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="bg-gradient-to-r from-[#0F2A44] to-[#1a4a6a] text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="relative py-32 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 bg-center bg-no-repeat" style="background-image: url('assets/pricing.jpg'); background-size: 100%; background-attachment: fixed;">
+            <!-- Minimal Overlay for text readability -->
+            <div class="absolute inset-0 bg-gradient-to-r from-[#0F2A44]/20 to-[#1a4a6a]/20"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center">
                 <h1 class="text-4xl md:text-5xl font-bold font-['Poppins'] mb-4">Tidee – Price List</h1>
-                <p class="text-xl text-gray-200 max-w-3xl mx-auto">
-                    Transparent pricing with no hidden charges. All prices include pickup, cleaning, and delivery.
+                <p class="text-xl text-black max-w-3xl mx-auto">
+                    Transparent pricing with no hidden charges. All prices include pickup, cleaning and delivery.
                 </p>
                 <div class="mt-8 flex justify-center">
                     <div class="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3">
-                        <p class="text-lg">📞 Call for bulk orders: <span class="font-semibold">+91 9220400344</span></p>
+                        <p class="text-lg"><i class="ri-phone-line mr-2"></i>Call for bulk orders: <span class="font-semibold">+91 9220400344</span></p>
                     </div>
                 </div>
             </div>
@@ -103,7 +108,7 @@
             <div class="mb-16">
                 <div class="flex items-center justify-center mb-8">
                     <div class="bg-[#3cc9e8] p-3 rounded-full mr-4">
-                        <span class="text-2xl">👔</span>
+                        <i class="ri-user-line text-2xl text-white"></i>
                     </div>
                     <h3 class="text-3xl font-bold font-['Poppins'] text-[#0F2A44]">MEN</h3>
                 </div>
@@ -162,7 +167,7 @@
             <div class="mb-16">
                 <div class="flex items-center justify-center mb-8">
                     <div class="bg-[#3cc9e8] p-3 rounded-full mr-4">
-                        <span class="text-2xl">👗</span>
+                        <i class="ri-women-line text-2xl text-white"></i>
                     </div>
                     <h3 class="text-3xl font-bold font-['Poppins'] text-[#0F2A44]">WOMEN</h3>
                 </div>
@@ -225,7 +230,7 @@
             <div class="mb-16">
                 <div class="flex items-center justify-center mb-8">
                     <div class="bg-[#3cc9e8] p-3 rounded-full mr-4">
-                        <span class="text-2xl">🧥</span>
+                        <i class="ri-shirt-line text-2xl text-white"></i>
                     </div>
                     <h3 class="text-3xl font-bold font-['Poppins'] text-[#0F2A44]">WOOLEN</h3>
                 </div>
@@ -276,7 +281,7 @@
             <div class="mb-16">
                 <div class="flex items-center justify-center mb-8">
                     <div class="bg-[#3cc9e8] p-3 rounded-full mr-4">
-                        <span class="text-2xl">🛏</span>
+                        <i class="ri-home-line text-2xl text-white"></i>
                     </div>
                     <h3 class="text-3xl font-bold font-['Poppins'] text-[#0F2A44]">HOUSEHOLD</h3>
                 </div>
@@ -339,10 +344,10 @@
             <!-- IRONING SERVICES Section -->
             <div id="ironing-services" class="mb-16">
                 <div class="flex items-center justify-center mb-8">
-                    <div class="bg-[#3cc9e8] p-3 rounded-full mr-4">
-                        <span class="text-2xl">👔</span>
-                    </div>
-                    <h3 class="text-3xl font-bold font-['Poppins'] text-[#0F2A44]">BEST IRONING SERVICES</h3>
+                    <h3 class="text-3xl font-bold font-['Poppins'] text-[#0F2A44] flex items-center">
+                        <i class="ri-steamer-line text-3xl text-[#3cc9e8] mr-3"></i>
+                        BEST IRONING SERVICES
+                    </h3>
                 </div>
 
                 <div class="text-center mb-8">
@@ -435,6 +440,91 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Price Information Section -->
+            <div class="mt-20 space-y-12">
+
+                <!-- 1. PRICE DISCLAIMER -->
+                <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 max-w-4xl mx-auto">
+                    <div class="flex items-center justify-center mb-3">
+                        <i class="ri-information-line text-2xl text-[#3cc9e8] mr-2"></i>
+                        <h4 class="text-lg font-bold text-[#0F2A44]">PRICE DISCLAIMER</h4>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed text-center">
+                        Prices may vary based on fabric, size & condition of garment.<br>
+                        Final price confirmed after quality check.
+                    </p>
+                </div>
+
+                <!-- Combined Comparison & Confidence Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- 2. COMPARISON BLOCK -->
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <div class="flex items-center justify-center mb-6">
+                            <i class="ri-bar-chart-line text-3xl text-[#3cc9e8] mr-3"></i>
+                            <h4 class="text-2xl font-bold text-[#0F2A44]">Normal Laundry vs Tidee</h4>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full border-collapse">
+                                <thead>
+                                    <tr class="bg-[#3cc9e8] text-white">
+                                        <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Feature</th>
+                                        <th class="border border-gray-300 px-4 py-3 text-center font-semibold">Local</th>
+                                        <th class="border border-gray-300 px-4 py-3 text-center font-semibold">Tidee</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="border border-gray-300 px-4 py-3 font-medium">Separate Wash</td>
+                                        <td class="border border-gray-300 px-4 py-3 text-center text-gray-600"><i class="ri-close-line text-xl"></i></td>
+                                        <td class="border border-gray-300 px-4 py-3 text-center text-gray-600"><i class="ri-check-line text-xl"></i></td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="border border-gray-300 px-4 py-3 font-medium">Hygienic Process</td>
+                                        <td class="border border-gray-300 px-4 py-3 text-center text-gray-600"><i class="ri-close-line text-xl"></i></td>
+                                        <td class="border border-gray-300 px-4 py-3 text-center text-gray-600"><i class="ri-check-line text-xl"></i></td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="border border-gray-300 px-4 py-3 font-medium">Transparent Pricing</td>
+                                        <td class="border border-gray-300 px-4 py-3 text-center text-gray-600"><i class="ri-close-line text-xl"></i></td>
+                                        <td class="border border-gray-300 px-4 py-3 text-center text-gray-600"><i class="ri-check-line text-xl"></i></td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="border border-gray-300 px-4 py-3 font-medium">Free Pickup</td>
+                                        <td class="border border-gray-300 px-4 py-3 text-center text-gray-600"><i class="ri-close-line text-xl"></i></td>
+                                        <td class="border border-gray-300 px-4 py-3 text-center text-gray-600"><i class="ri-check-line text-xl"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 3. PRICE CONFIDENCE BOX -->
+                    <div class="bg-gradient-to-r from-[#0F2A44] to-[#1a4a6a] text-white rounded-xl p-8">
+                        <div class="flex items-center justify-center mb-6">
+                            <i class="ri-shield-check-line text-3xl mr-3"></i>
+                            <h4 class="text-xl font-bold">PRICE CONFIDENCE</h4>
+                        </div>
+                        <div class="grid grid-cols-1 gap-6">
+                            <div class="text-center">
+                                <div class="text-3xl mb-2">✔</div>
+                                <p class="font-semibold">No hidden charges</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl mb-2">✔</div>
+                                <p class="font-semibold">No colour mixing</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl mb-2">✔</div>
+                                <p class="font-semibold">Separate wash for every order</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <br><br>
 
             <!-- CTA Section -->
             <div class="text-center">

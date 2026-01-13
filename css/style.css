@@ -491,6 +491,28 @@ html {
   }
 }
 
+/* About Banner Background */
+.about-banner-bg {
+  background-image: url('../assets/about banner.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  min-height: 500px;
+}
+
+.about-banner-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(15, 42, 68, 0.6), rgba(26, 74, 106, 0.6));
+  z-index: 1;
+}
+
 /* Pricing Cards - Hover Effects */
 .pricing-card {
   display: block;
