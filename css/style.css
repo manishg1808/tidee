@@ -442,6 +442,46 @@ html {
   }
 }
 
+/* Pricing Page Banner Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* Fix pricing banner background for mobile */
+  .pricing-banner-bg {
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 300px !important;
+  }
+
+  /* Ensure pricing banner text is readable on mobile */
+  .pricing-banner-content {
+    padding: 2rem 1rem !important;
+  }
+
+  .pricing-banner-content h1 {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .pricing-banner-content p {
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-banner-bg {
+    min-height: 250px !important;
+  }
+
+  .pricing-banner-content h1 {
+    font-size: 1.75rem !important;
+  }
+
+  .pricing-banner-content p {
+    font-size: 0.9rem !important;
+  }
+}
+
 /* Testimonials Scrolling */
 .testimonials-scroll {
   display: flex;
@@ -500,6 +540,20 @@ html {
   background-attachment: fixed;
   position: relative;
   min-height: 500px;
+}
+
+/* Mobile responsiveness for about banner */
+@media (max-width: 768px) {
+  .about-banner-bg {
+    background-attachment: scroll !important;
+    min-height: 400px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-banner-bg {
+    min-height: 350px !important;
+  }
 }
 
 .about-banner-bg::before {
