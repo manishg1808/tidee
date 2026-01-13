@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" href="assets/tide logo.jpeg">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@streamlinehq/streamline-icons@2.0.0/web/streamline.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,10 +50,16 @@
                     </a>
                 </div>
 
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
+                <!-- Mobile CTA Buttons & Menu -->
+                <div class="md:hidden flex items-center space-x-2">
+                    <button onclick="openBookingModal()" class="bg-gradient-to-r from-[#3cc9e8] to-[#2ea8c0] text-white px-3 py-1.5 rounded-md text-xs font-medium hover:from-[#2ea8c0] hover:to-[#1a7a8f] transition-all duration-300">
+                        Book Pickup
+                    </button>
+                    <a href="tel:+919876543210" class="bg-gradient-to-r from-[#3cc9e8] to-[#2ea8c0] text-white p-2 rounded-md hover:from-[#2ea8c0] hover:to-[#1a7a8f] transition-all duration-300">
+                        <i class="ri-phone-line text-sm"></i>
+                    </a>
                     <button id="mobile-menu-button" class="text-gray-600 hover:text-[#3cc9e8] p-2">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
@@ -122,7 +128,7 @@
                             <p class="text-gray-600">Items Cleaned</p>
                         </div>
                         <div class="text-center">
-                            <div class="text-3xl font-bold text-[#3cc9e8] mb-2">4</div>
+                            <div class="text-3xl font-bold text-[#3cc9e8] mb-2">5+</div>
                             <p class="text-gray-600">Years Experience</p>
                         </div>
                     </div>
@@ -146,69 +152,75 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <!-- Mission -->
-                <div class="bg-white rounded-xl p-8 shadow-lg">
+                <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
                     <div class="flex items-center mb-6">
-                        <div class="bg-[#3cc9e8] text-white p-4 rounded-lg mr-6">
-                            <i class="ri-target-line text-3xl text-white"></i>
+                        <div class="text-[#3cc9e8] mr-6 flex-shrink-0">
+                            <i class="ri-crosshair-line" style="font-size: 2.5rem;"></i>
                         </div>
                         <div>
-                            <h3 class="text-2xl font-bold font-['Poppins'] text-[#0F2A44]">Our Mission</h3>
+                            <h3 class="text-2xl font-bold font-['Poppins'] text-[#0F2A44] mb-2">Our Mission</h3>
+                            <p class="text-[#3cc9e8] font-medium text-sm">What We Do Every Day</p>
                         </div>
                     </div>
-                    <p class="text-gray-700 leading-relaxed mb-4">
+
+                    <p class="text-gray-700 leading-relaxed mb-6">
                         To deliver fresh, hygienic, and perfectly cleaned clothes at affordable prices while ensuring complete customer satisfaction. We strive to make laundry service convenient, reliable, and eco-friendly for everyone.
                     </p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-start">
-                            <div class="text-[#3cc9e8] mr-2 mt-1">•</div>
-                            <span>Maintain the highest standards of quality and hygiene</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="text-[#3cc9e8] mr-2 mt-1">•</div>
-                            <span>Provide exceptional customer service</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="text-[#3cc9e8] mr-2 mt-1">•</div>
-                            <span>Use eco-friendly cleaning methods</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="text-[#3cc9e8] mr-2 mt-1">•</div>
-                            <span>Ensure timely pickup and delivery</span>
-                        </li>
-                    </ul>
+
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="ri-shield-check-line text-[#3cc9e8] text-lg mr-3 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-600">Maintain the highest standards of quality and hygiene</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="ri-user-heart-line text-[#3cc9e8] text-lg mr-3 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-600">Provide exceptional customer service</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="ri-leaf-line text-[#3cc9e8] text-lg mr-3 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-600">Use eco-friendly cleaning methods</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="ri-truck-line text-[#3cc9e8] text-lg mr-3 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-600">Ensure timely pickup and delivery</span>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Vision -->
-                <div class="bg-white rounded-xl p-8 shadow-lg">
+                <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
                     <div class="flex items-center mb-6">
-                        <div class="bg-[#0F2A44] text-white p-4 rounded-lg mr-6">
-                            <div class="text-3xl">🔮</div>
+                        <div class="text-[#0F2A44] mr-6 flex-shrink-0">
+                            <i class="ri-focus-3-line" style="font-size: 2.5rem;"></i>
                         </div>
                         <div>
-                            <h3 class="text-2xl font-bold font-['Poppins'] text-[#0F2A44]">Our Vision</h3>
+                            <h3 class="text-2xl font-bold font-['Poppins'] text-[#0F2A44] mb-2">Our Vision</h3>
+                            <p class="text-[#0F2A44] font-medium text-sm">Where We're Heading</p>
                         </div>
                     </div>
-                    <p class="text-gray-700 leading-relaxed mb-4">
+
+                    <p class="text-gray-700 leading-relaxed mb-6">
                         To become the most trusted and preferred laundry brand in India, setting new standards for quality, convenience, and sustainability in the laundry industry.
                     </p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-start">
-                            <div class="text-[#3cc9e8] mr-2 mt-1">•</div>
-                            <span>Expand to serve customers across India</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="text-[#3cc9e8] mr-2 mt-1">•</div>
-                            <span>Lead innovation in eco-friendly laundry solutions</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="text-[#3cc9e8] mr-2 mt-1">•</div>
-                            <span>Build lasting partnerships with businesses</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="text-[#3cc9e8] mr-2 mt-1">•</div>
-                            <span>Create employment opportunities</span>
-                        </li>
-                    </ul>
+
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="ri-star-fill text-[#0F2A44] text-lg mr-3 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-600">Expand to serve customers across India</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="ri-star-fill text-[#0F2A44] text-lg mr-3 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-600">Lead innovation in eco-friendly laundry solutions</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="ri-star-fill text-[#0F2A44] text-lg mr-3 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-600">Build lasting partnerships with businesses</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="ri-star-fill text-[#0F2A44] text-lg mr-3 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-600">Create employment opportunities</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -322,10 +334,10 @@
                 <p class="text-lg text-gray-600">What sets us apart from the competition</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
                 <!-- Trained Professionals -->
                 <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
-                    <div class="text-4xl mb-4">👨‍💼</div>
+                    <i class="ri-user-line text-4xl mb-4 text-[#3cc9e8]"></i>
                     <h3 class="text-xl font-bold text-[#0F2A44] mb-3">Trained Professionals</h3>
                     <p class="text-gray-600">
                         Our team undergoes regular training to stay updated with the latest cleaning techniques and safety standards.
@@ -343,7 +355,7 @@
 
                 <!-- Quality Control -->
                 <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
-                    <div class="text-4xl mb-4">✅</div>
+                    <i class="ri-check-line text-4xl mb-4 text-[#3cc9e8]"></i>
                     <h3 class="text-xl font-bold text-[#0F2A44] mb-3">Quality Control</h3>
                     <p class="text-gray-600">
                         Every item goes through multiple quality checks before being delivered to ensure perfection.
@@ -352,7 +364,7 @@
 
                 <!-- Fast Service -->
                 <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
-                    <i class="ri-zap-line text-4xl mb-4 text-[#3cc9e8]"></i>
+                    <i class="ri-flashlight-line text-4xl mb-4 text-[#3cc9e8]"></i>
                     <h3 class="text-xl font-bold text-[#0F2A44] mb-3">Fast Service</h3>
                     <p class="text-gray-600">
                         Same-day service available for urgent requirements with express delivery options.
@@ -361,7 +373,7 @@
 
                 <!-- Safe Packaging -->
                 <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
-                    <div class="text-4xl mb-4">📦</div>
+                    <i class="ri-box-3-line text-4xl mb-4 text-[#3cc9e8]"></i>
                     <h3 class="text-xl font-bold text-[#0F2A44] mb-3">Safe Packaging</h3>
                     <p class="text-gray-600">
                         Clothes are carefully folded and packaged to prevent wrinkles and damage during transit.
@@ -370,11 +382,125 @@
 
                 <!-- 24/7 Support -->
                 <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
-                    <div class="text-4xl mb-4">📞</div>
+                    <i class="ri-phone-line text-4xl mb-4 text-[#3cc9e8]"></i>
                     <h3 class="text-xl font-bold text-[#0F2A44] mb-3">24/7 Support</h3>
                     <p class="text-gray-600">
                         Round-the-clock customer support to address your queries and concerns anytime.
                     </p>
+                </div>
+
+                <!-- Separate Wash -->
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                    <i class="ri-windy-line text-4xl mb-4 text-[#3cc9e8]"></i>
+                    <h3 class="text-xl font-bold text-[#0F2A44] mb-3">Separate Wash</h3>
+                    <p class="text-gray-600">
+                        Clothes are washed separately to prevent color bleeding and maintain fabric quality.
+                    </p>
+                </div>
+
+                <!-- Fabric-Safe Cleaning -->
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                    <i class="ri-shield-check-line text-4xl mb-4 text-[#3cc9e8]"></i>
+                    <h3 class="text-xl font-bold text-[#0F2A44] mb-3">Fabric-Safe Cleaning</h3>
+                    <p class="text-gray-600">
+                        Gentle cleaning methods tailored for different fabric types to preserve quality and longevity.
+                    </p>
+                </div>
+
+                <!-- Affordable Pricing -->
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                    <i class="ri-money-dollar-circle-line text-4xl mb-4 text-[#3cc9e8]"></i>
+                    <h3 class="text-xl font-bold text-[#0F2A44] mb-3">Affordable Pricing</h3>
+                    <p class="text-gray-600">
+                        Competitive and transparent pricing with no hidden charges for quality laundry services.
+                    </p>
+                </div>
+
+                <!-- On-Time Delivery -->
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                    <i class="ri-time-line text-4xl mb-4 text-[#3cc9e8]"></i>
+                    <h3 class="text-xl font-bold text-[#0F2A44] mb-3">On-Time Delivery</h3>
+                    <p class="text-gray-600">
+                        Reliable and punctual delivery service ensuring your clothes arrive when promised.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Serve -->
+    <section class="who-we-serve-bg py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold font-['Poppins'] text-white mb-4">Who We Serve</h2>
+                <p class="text-lg text-gray-200">Tailored laundry solutions for every customer segment</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Families -->
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-[#3cc9e8] to-[#2ea8c0] text-white w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="ri-home-4-line text-4xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold font-['Poppins'] text-white mb-6">Families</h3>
+                    <div class="space-y-4 text-left bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                        <div class="flex items-start">
+                            <div class="text-[#3cc9e8] mr-3 mt-1">•</div>
+                            <span class="text-white">Safe & hygienic cleaning for everyday and delicate clothes</span>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-[#3cc9e8] mr-3 mt-1">•</div>
+                            <span class="text-white">Affordable plans for regular household laundry</span>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-[#3cc9e8] mr-3 mt-1">•</div>
+                            <span class="text-white">Reliable pickup & delivery for busy households</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Working Professionals -->
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-[#0F2A44] to-[#1a4a6a] text-white w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="ri-briefcase-line text-4xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold font-['Poppins'] text-white mb-6">Working Professionals</h3>
+                    <div class="space-y-4 text-left bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                        <div class="flex items-start">
+                            <div class="text-[#3cc9e8] mr-3 mt-1">•</div>
+                            <span class="text-white">Crisp ironing and fresh laundry for office wear</span>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-[#3cc9e8] mr-3 mt-1">•</div>
+                            <span class="text-white">Time-saving doorstep service</span>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-[#3cc9e8] mr-3 mt-1">•</div>
+                            <span class="text-white">Flexible weekly and monthly subscription plans</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotels & Offices -->
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-[#3cc9e8] to-[#2ea8c0] text-white w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="ri-building-4-line text-4xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold font-['Poppins'] text-white mb-6">Hotels & Offices</h3>
+                    <div class="space-y-4 text-left bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                        <div class="flex items-start">
+                            <div class="text-[#3cc9e8] mr-3 mt-1">•</div>
+                            <span class="text-white">Bulk laundry and linen cleaning at scale</span>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-[#3cc9e8] mr-3 mt-1">•</div>
+                            <span class="text-white">Consistent quality with on-time delivery</span>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-[#3cc9e8] mr-3 mt-1">•</div>
+                            <span class="text-white">Customized commercial laundry solutions</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

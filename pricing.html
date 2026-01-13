@@ -50,10 +50,16 @@
                     </a>
                 </div>
 
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
+                <!-- Mobile CTA Buttons & Menu -->
+                <div class="md:hidden flex items-center space-x-2">
+                    <button onclick="openBookingModal()" class="bg-gradient-to-r from-[#3cc9e8] to-[#2ea8c0] text-white px-3 py-1.5 rounded-md text-xs font-medium hover:from-[#2ea8c0] hover:to-[#1a7a8f] transition-all duration-300">
+                        Book Pickup
+                    </button>
+                    <a href="tel:+919876543210" class="bg-gradient-to-r from-[#3cc9e8] to-[#2ea8c0] text-white p-2 rounded-md hover:from-[#2ea8c0] hover:to-[#1a7a8f] transition-all duration-300">
+                        <i class="ri-phone-line text-sm"></i>
+                    </a>
                     <button id="mobile-menu-button" class="text-gray-600 hover:text-[#3cc9e8] p-2">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
@@ -82,7 +88,7 @@
     <!-- Page Header -->
     <section class="relative py-32 overflow-hidden">
         <!-- Background Image -->
-        <div class="absolute inset-0 pricing-banner-bg" style="background-image: url('assets/pricing.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <div class="absolute inset-0 pricing-banner-bg" style="background-image: url('assets/pricing.jpg'); background-size: 100%; background-position: center; background-attachment: fixed;">
             <!-- Minimal Overlay for text readability -->
             <div class="absolute inset-0 bg-gradient-to-r from-[#0F2A44]/20 to-[#1a4a6a]/20"></div>
         </div>

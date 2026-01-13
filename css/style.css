@@ -442,6 +442,17 @@ html {
   }
 }
 
+/* Pricing Page Banner Background */
+.pricing-banner-bg {
+  background-image: url('../assets/pricing.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  min-height: 500px;
+}
+
 /* Pricing Page Banner Mobile Responsiveness */
 @media (max-width: 768px) {
   /* Fix pricing banner background for mobile */
@@ -553,6 +564,32 @@ html {
 @media (max-width: 480px) {
   .about-banner-bg {
     min-height: 350px !important;
+  }
+}
+
+/* Who We Serve Background */
+.who-we-serve-bg {
+  background: linear-gradient(rgba(15, 42, 68, 0.5), rgba(26, 74, 106, 0.5)), url('../assets/28.jpg') center/contain no-repeat fixed;
+  position: relative;
+  min-height: 600px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+/* Mobile responsiveness for who we serve background */
+@media (max-width: 768px) {
+  .who-we-serve-bg {
+    background-attachment: scroll !important;
+    min-height: 500px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .who-we-serve-bg {
+    min-height: 450px !important;
   }
 }
 
