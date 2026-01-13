@@ -17,6 +17,57 @@ function closeBookingModal() {
     }
 }
 
+// Weekly Subscription Modal Functions
+function openWeeklySubscriptionModal() {
+    const modal = document.getElementById('weekly-subscription-modal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeWeeklySubscriptionModal() {
+    const modal = document.getElementById('weekly-subscription-modal');
+    if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }
+}
+
+// Monthly Subscription Modal Functions
+function openMonthlySubscriptionModal() {
+    const modal = document.getElementById('monthly-subscription-modal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeMonthlySubscriptionModal() {
+    const modal = document.getElementById('monthly-subscription-modal');
+    if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }
+}
+
+// Yearly Subscription Modal Functions
+function openYearlySubscriptionModal() {
+    const modal = document.getElementById('yearly-subscription-modal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeYearlySubscriptionModal() {
+    const modal = document.getElementById('yearly-subscription-modal');
+    if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu functionality
     const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -43,6 +94,36 @@ document.addEventListener('DOMContentLoaded', function() {
         bookingModal.addEventListener('click', function(event) {
             if (event.target === bookingModal) {
                 closeBookingModal();
+            }
+        });
+    }
+
+    // Subscription Modal Event Listeners
+    const weeklySubscriptionModal = document.getElementById('weekly-subscription-modal');
+    const monthlySubscriptionModal = document.getElementById('monthly-subscription-modal');
+    const yearlySubscriptionModal = document.getElementById('yearly-subscription-modal');
+
+    // Close modals when clicking outside
+    if (weeklySubscriptionModal) {
+        weeklySubscriptionModal.addEventListener('click', function(event) {
+            if (event.target === weeklySubscriptionModal) {
+                closeWeeklySubscriptionModal();
+            }
+        });
+    }
+
+    if (monthlySubscriptionModal) {
+        monthlySubscriptionModal.addEventListener('click', function(event) {
+            if (event.target === monthlySubscriptionModal) {
+                closeMonthlySubscriptionModal();
+            }
+        });
+    }
+
+    if (yearlySubscriptionModal) {
+        yearlySubscriptionModal.addEventListener('click', function(event) {
+            if (event.target === yearlySubscriptionModal) {
+                closeYearlySubscriptionModal();
             }
         });
     }
@@ -98,12 +179,147 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Set minimum date to today
+    // Set minimum date to today for booking modal
     const dateInput = document.querySelector('input[name="pickup_date"]');
     if (dateInput) {
         const today = new Date().toISOString().split('T')[0];
         dateInput.setAttribute('min', today);
     }
+
+    // Weekly Subscription Form Handler
+    const weeklySubscriptionForm = document.getElementById('weekly-subscription-form');
+    if (weeklySubscriptionForm) {
+        weeklySubscriptionForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const mobile = formData.get('mobile');
+            const email = formData.get('email') || 'Not provided';
+            const address = formData.get('address');
+            const pickupDay = formData.get('pickup_day');
+
+            const message = `*Weekly Subscription Request*%0A%0A` +
+                          `*Name:* ${name}%0A` +
+                          `*Mobile:* ${mobile}%0A` +
+                          `*Email:* ${email}%0A` +
+                          `*Address:* ${address}%0A` +
+                          `*Pickup Day:* ${pickupDay}%0A` +
+                          `*Plan:* Weekly Subscription (₹499/week)%0A` +
+                          `*Payment:* ₹499 (100% Advance)%0A%0A` +
+                          `Please confirm this subscription request.`;
+
+            const whatsappURL = `https://wa.me/919220400344?text=${message}`;
+
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Redirecting to WhatsApp...';
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                this.reset();
+                closeWeeklySubscriptionModal();
+                window.open(whatsappURL, '_blank');
+            }, 1000);
+        });
+    }
+
+    // Monthly Subscription Form Handler
+    const monthlySubscriptionForm = document.getElementById('monthly-subscription-form');
+    if (monthlySubscriptionForm) {
+        monthlySubscriptionForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const mobile = formData.get('mobile');
+            const email = formData.get('email') || 'Not provided';
+            const address = formData.get('address');
+            const startDate = formData.get('start_date');
+            const pickupFrequency = formData.get('pickup_frequency');
+
+            const message = `*Monthly Subscription Request*%0A%0A` +
+                          `*Name:* ${name}%0A` +
+                          `*Mobile:* ${mobile}%0A` +
+                          `*Email:* ${email}%0A` +
+                          `*Address:* ${address}%0A` +
+                          `*Start Date:* ${startDate}%0A` +
+                          `*Pickup Frequency:* ${pickupFrequency}%0A` +
+                          `*Plan:* Monthly Subscription (₹1,799/month)%0A` +
+                          `*Payment:* ₹899.50 (50% Advance)%0A%0A` +
+                          `Please confirm this subscription request.`;
+
+            const whatsappURL = `https://wa.me/919220400344?text=${message}`;
+
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Redirecting to WhatsApp...';
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                this.reset();
+                closeMonthlySubscriptionModal();
+                window.open(whatsappURL, '_blank');
+            }, 1000);
+        });
+    }
+
+    // Yearly Subscription Form Handler
+    const yearlySubscriptionForm = document.getElementById('yearly-subscription-form');
+    if (yearlySubscriptionForm) {
+        yearlySubscriptionForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const mobile = formData.get('mobile');
+            const email = formData.get('email');
+            const address = formData.get('address');
+            const startDate = formData.get('start_date');
+            const pickupFrequency = formData.get('pickup_frequency');
+            const company = formData.get('company') || 'Not provided';
+
+            const message = `*Yearly Subscription Request*%0A%0A` +
+                          `*Name:* ${name}%0A` +
+                          `*Mobile:* ${mobile}%0A` +
+                          `*Email:* ${email}%0A` +
+                          `*Address:* ${address}%0A` +
+                          `*Start Date:* ${startDate}%0A` +
+                          `*Pickup Frequency:* ${pickupFrequency}%0A` +
+                          `*Company:* ${company}%0A` +
+                          `*Plan:* Yearly Subscription (₹18,999/year - Save 20%)%0A` +
+                          `*Payment:* ₹9,499.50 (50% Advance)%0A%0A` +
+                          `Please confirm this subscription request.`;
+
+            const whatsappURL = `https://wa.me/919220400344?text=${message}`;
+
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Redirecting to WhatsApp...';
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                this.reset();
+                closeYearlySubscriptionModal();
+                window.open(whatsappURL, '_blank');
+            }, 1000);
+        });
+    }
+
+    // Set minimum dates for subscription forms
+    const subscriptionDateInputs = document.querySelectorAll('input[name="start_date"]');
+    subscriptionDateInputs.forEach(input => {
+        const today = new Date();
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        input.setAttribute('min', tomorrow.toISOString().split('T')[0]);
+    });
 
 
     // Smooth scrolling for anchor links

@@ -80,15 +80,14 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="bg-gradient-to-r from-[#0F2A44] to-[#1a4a6a] text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold font-['Poppins'] mb-4">Our Services</h1>
-                <p class="text-xl text-gray-200 max-w-3xl mx-auto">
-                    Professional laundry and dry cleaning services tailored to your needs with guaranteed quality and freshness.
-                </p>
+    <section class="bg-gradient-to-r from-[#0F2A44] to-[#1a4a6a] text-white py-56 relative" style="background-image: url('assets/banner services.jpg'); background-size: cover; background-position: center; background-blend-mode: overlay;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-left -mt-8">
+                <h1 class="text-4xl md:text-5xl font-bold font-['Poppins']">Our Services</h1>
             </div>
         </div>
+        <!-- Overlay for better text readability -->
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
     </section>
 
     <!-- Mega Menu Services Navigation -->
@@ -275,10 +274,239 @@
         </div>
     </section>
 
+    <!-- Laundry Subscription Plans -->
+    <section id="subscription-plans" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold font-['Poppins'] text-[#0F2A44] mb-4">Laundry Subscription Plans – Save More Every Month</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Choose a flexible weekly, monthly or yearly plan with assured savings and priority service.
+                </p>
+            </div>
+
+            <!-- Subscription Plans Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+
+                <!-- Weekly Plan -->
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-200">
+                    <div class="text-center mb-6">
+                        <div class="bg-[#3cc9e8] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="ri-calendar-line text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold font-['Poppins'] text-[#0F2A44] mb-2">WEEKLY PLAN</h3>
+                        <p class="text-sm text-gray-600 mb-4">Best for: Bachelors, students, small families</p>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-[#0F2A44] mb-3">Includes:</h4>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li class="flex items-center"><span class="w-2 h-2 bg-[#3cc9e8] rounded-full mr-3"></span>Wash & Fold</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-[#3cc9e8] rounded-full mr-3"></span>Wash & Iron</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-[#3cc9e8] rounded-full mr-3"></span>Steam Ironing</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-[#3cc9e8] rounded-full mr-3"></span>Limited Dry Cleaning (optional add-on)</li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                            <div class="text-center">
+                                <div class="text-sm text-gray-600 mb-1">Usage:</div>
+                                <div class="font-semibold text-[#0F2A44]">Up to 25 clothes / week</div>
+                            </div>
+                        </div>
+                        <div class="text-center mb-4">
+                            <div class="text-3xl font-bold text-[#3cc9e8] mb-1">₹499</div>
+                            <div class="text-sm text-gray-600">/ week</div>
+                        </div>
+                        <div class="bg-red-50 border border-red-200 rounded-lg p-3 mb-4">
+                            <div class="flex items-center justify-center">
+                                <i class="ri-lock-line text-red-500 mr-2"></i>
+                                <span class="text-sm font-medium text-red-700">100% Advance Payment Required</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="openWeeklySubscriptionModal()" class="w-full bg-gradient-to-r from-[#3cc9e8] to-[#2ea8c0] text-white py-3 px-6 rounded-lg font-semibold hover:from-[#2ea8c0] hover:to-[#1a7a8f] transition-all duration-300 transform hover:scale-105">
+                        👉 Subscribe Weekly
+                    </button>
+                </div>
+
+                <!-- Monthly Plan (Most Popular) -->
+                <div class="bg-white rounded-xl p-8 shadow-xl hover:shadow-2xl transition-shadow border-2 border-[#3cc9e8] relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">🟢 Most Chosen Plan</span>
+                    </div>
+
+                    <div class="text-center mb-6">
+                        <div class="bg-[#3cc9e8] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="ri-calendar-check-line text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold font-['Poppins'] text-[#0F2A44] mb-2">MONTHLY PLAN</h3>
+                        <p class="text-sm text-gray-600 mb-4">Best for: Working professionals, families</p>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-[#0F2A44] mb-3">Includes:</h4>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li class="flex items-center"><span class="w-2 h-2 bg-[#3cc9e8] rounded-full mr-3"></span>Wash & Fold</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-[#3cc9e8] rounded-full mr-3"></span>Wash & Iron</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-[#3cc9e8] rounded-full mr-3"></span>Steam Ironing</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-[#3cc9e8] rounded-full mr-3"></span>Dry Cleaning (limited items)</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-[#3cc9e8] rounded-full mr-3"></span>Free pickup & delivery</li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                            <div class="text-center">
+                                <div class="text-sm text-gray-600 mb-1">Usage:</div>
+                                <div class="font-semibold text-[#0F2A44]">Up to 100 clothes / month</div>
+                            </div>
+                        </div>
+                        <div class="text-center mb-4">
+                            <div class="text-3xl font-bold text-[#3cc9e8] mb-1">₹1,799</div>
+                            <div class="text-sm text-gray-600">/ month</div>
+                        </div>
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-3 mb-4">
+                            <div class="flex items-center justify-center">
+                                <i class="ri-lock-line text-yellow-600 mr-2"></i>
+                                <span class="text-sm font-medium text-yellow-700">50% Advance + 50% Mid-Month</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="openMonthlySubscriptionModal()" class="w-full bg-gradient-to-r from-[#3cc9e8] to-[#2ea8c0] text-white py-3 px-6 rounded-lg font-semibold hover:from-[#2ea8c0] hover:to-[#1a7a8f] transition-all duration-300 transform hover:scale-105">
+                        👉 Subscribe Monthly
+                    </button>
+                </div>
+
+                <!-- Yearly Plan -->
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-200">
+                    <div class="text-center mb-6">
+                        <div class="bg-[#3cc9e8] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="ri-calendar-todo-line text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold font-['Poppins'] text-[#0F2A44] mb-2">YEARLY PLAN</h3>
+                        <p class="text-sm text-gray-600 mb-4">Best for: Families, corporate users</p>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-[#0F2A44] mb-3">Includes:</h4>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li class="flex items-center"><span class="w-2 h-2 bg-[#3cc9e8] rounded-full mr-3"></span>All laundry services</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-[#3cc9e8] rounded-full mr-3"></span>Priority pickup & delivery</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-[#3cc9e8] rounded-full mr-3"></span>Free stain removal (limited)</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-[#3cc9e8] rounded-full mr-3"></span>Discounted dry cleaning rates</li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                            <div class="text-center">
+                                <div class="text-sm text-gray-600 mb-1">Usage:</div>
+                                <div class="font-semibold text-[#0F2A44]">Up to 1200 clothes / year</div>
+                            </div>
+                        </div>
+                        <div class="text-center mb-4">
+                            <div class="text-3xl font-bold text-[#3cc9e8] mb-1">₹18,999</div>
+                            <div class="text-sm text-gray-600">/ year</div>
+                            <div class="text-green-600 font-semibold text-sm">Save up to 20%</div>
+                        </div>
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
+                            <div class="text-center">
+                                <div class="flex items-center justify-center mb-2">
+                                    <i class="ri-lock-line text-blue-600 mr-2"></i>
+                                    <span class="text-sm font-medium text-blue-700">50% Advance Payment Required</span>
+                                </div>
+                                <div class="text-xs text-blue-600">Remaining amount payable in easy quarterly installments</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="openYearlySubscriptionModal()" class="w-full bg-gradient-to-r from-[#3cc9e8] to-[#2ea8c0] text-white py-3 px-6 rounded-lg font-semibold hover:from-[#2ea8c0] hover:to-[#1a7a8f] transition-all duration-300 transform hover:scale-105">
+                        👉 Subscribe Yearly & Save More
+                    </button>
+                </div>
+            </div>
+
+            <!-- Important Terms -->
+            <div class="bg-gray-50 rounded-xl p-8">
+                <h3 class="text-xl font-bold font-['Poppins'] text-[#0F2A44] mb-6 text-center">📌 Important Subscription Terms</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-semibold text-[#0F2A44] mb-3">Subscription Terms:</h4>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li class="flex items-start"><span class="text-[#3cc9e8] mr-2 mt-1">•</span>Advance payment mandatory to activate plan</li>
+                            <li class="flex items-start"><span class="text-[#3cc9e8] mr-2 mt-1">•</span>Unused clothes do not carry forward</li>
+                            <li class="flex items-start"><span class="text-[#3cc9e8] mr-2 mt-1">•</span>Dry cleaning limits apply as per plan</li>
+                            <li class="flex items-start"><span class="text-[#3cc9e8] mr-2 mt-1">•</span>Pickup schedule fixed at time of subscription</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-[#0F2A44] mb-3">Payment Terms:</h4>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li class="flex items-start"><span class="text-[#3cc9e8] mr-2 mt-1">•</span>Weekly: 100% advance payment required</li>
+                            <li class="flex items-start"><span class="text-[#3cc9e8] mr-2 mt-1">•</span>Monthly: 50% advance + 50% mid-month</li>
+                            <li class="flex items-start"><span class="text-[#3cc9e8] mr-2 mt-1">•</span>Yearly: 50% advance + quarterly installments</li>
+                            <li class="flex items-start"><span class="text-[#3cc9e8] mr-2 mt-1">•</span>All payments via online/bank transfer</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ironing Services Highlight -->
+    <section class="py-20 relative overflow-hidden" style="background-image: url('assets/iron.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <!-- Overlay for better content readability -->
+        <div class="absolute inset-0 bg-gradient-to-r from-[#3cc9e8]/15 to-[#2ea8c0]/15"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold font-['Poppins'] text-[#0F2A44] mb-4">Best Ironing Services</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Professional ironing services with FREE pickup & delivery. Starting @ ₹7 only!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <!-- Features -->
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <h4 class="text-lg font-bold text-[#0F2A44] mb-4 text-center">Features</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Free Pickup & Delivery</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>24/7 Service</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Professional Ironing</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Quality Guarantee</li>
+                    </ul>
+                </div>
+
+                <!-- Monthly Plan -->
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <h4 class="text-lg font-bold text-[#0F2A44] mb-4 text-center">Monthly Plan</h4>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-[#3cc9e8] mb-2">₹500/-</div>
+                        <div class="text-sm text-gray-600 mb-2">Per Month</div>
+                        <div class="text-lg font-semibold text-[#0F2A44]">70 Clothes</div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="bg-white rounded-xl p-6 shadow-lg flex flex-col justify-center items-center">
+                    <h4 class="text-lg font-bold text-[#0F2A44] mb-4 text-center">More Details</h4>
+                    <a href="pricing.html#ironing-services" class="bg-gradient-to-r from-[#3cc9e8] to-[#2ea8c0] text-white px-6 py-3 rounded-lg font-semibold hover:from-[#2ea8c0] hover:to-[#1a7a8f] transition-all duration-300 transform hover:scale-105">
+                        View Pricing
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2 text-center">Complete price list & plans</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Navigation -->
     <section class="py-8 bg-gray-50 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-wrap justify-center gap-4">
+                <a href="#subscription-plans" class="px-6 py-2 bg-gradient-to-r from-[#3cc9e8] to-[#2ea8c0] text-white rounded-full shadow-sm hover:shadow-md transition-shadow font-medium">Subscription Plans</a>
                 <a href="#dry-cleaning" class="px-6 py-2 bg-white rounded-full shadow-sm hover:shadow-md transition-shadow text-[#0F2A44] font-medium">Dry Cleaning</a>
                 <a href="#wash-fold" class="px-6 py-2 bg-white rounded-full shadow-sm hover:shadow-md transition-shadow text-[#0F2A44] font-medium">Wash & Fold</a>
                 <a href="#wash-iron" class="px-6 py-2 bg-white rounded-full shadow-sm hover:shadow-md transition-shadow text-[#0F2A44] font-medium">Wash & Iron</a>
@@ -303,7 +531,7 @@
                         </div>
                     </div>
 
-                    <p class="text-gray-700 mb-6 leading-relaxed">
+                    <p class="text-gray-700 mb-6 leading-relaxed text-justify">
                         Our premium dry cleaning service uses advanced techniques and eco-friendly solvents to gently clean your delicate and luxury fabrics. Perfect for suits, dresses, jackets, and other garments that require special care.
                     </p>
 
@@ -384,7 +612,7 @@
                         </div>
                     </div>
 
-                    <p class="text-gray-700 mb-6 leading-relaxed">
+                    <p class="text-gray-700 mb-6 leading-relaxed text-justify">
                         Perfect for your everyday laundry needs. We wash, dry, and fold your clothes with care, ensuring they're fresh, clean, and ready to wear. Ideal for t-shirts, jeans, underwear, and other casual wear.
                     </p>
 
@@ -455,7 +683,7 @@
                         </div>
                     </div>
 
-                    <p class="text-gray-700 mb-6 leading-relaxed">
+                    <p class="text-gray-700 mb-6 leading-relaxed text-justify">
                         Get your clothes washed and perfectly ironed for a crisp, professional look. Our expert ironing service ensures wrinkle-free results for shirts, trousers, dresses, and more. Perfect for office wear and formal occasions.
                     </p>
 
@@ -536,7 +764,7 @@
                         </div>
                     </div>
 
-                    <p class="text-gray-700 mb-6 leading-relaxed">
+                    <p class="text-gray-700 mb-6 leading-relaxed text-justify">
                         Our advanced steam ironing service uses professional-grade steam technology to remove even the toughest wrinkles. Perfect for formal wear, business attire, and special occasion outfits that need to look impeccable.
                     </p>
 
@@ -607,7 +835,7 @@
                         </div>
                     </div>
 
-                    <p class="text-gray-700 mb-6 leading-relaxed">
+                    <p class="text-gray-700 mb-6 leading-relaxed text-justify">
                         Give your shoes a professional cleaning and restoration service. We remove dirt, stains, and odors while preserving the quality and extending the life of your footwear. Perfect for leather, canvas, and synthetic materials.
                     </p>
 
@@ -688,7 +916,7 @@
                         </div>
                     </div>
 
-                    <p class="text-gray-700 mb-6 leading-relaxed">
+                    <p class="text-gray-700 mb-6 leading-relaxed text-justify">
                         Professional carpet cleaning service that removes deep-seated dirt, stains, allergens, and bacteria. We use advanced cleaning techniques and eco-friendly products to restore your carpets to their original beauty.
                     </p>
 
@@ -746,61 +974,6 @@
     </section>
 
 
-    <!-- Ironing Services Highlight -->
-    <section class="py-20 bg-gradient-to-r from-[#3cc9e8]/10 to-[#2ea8c0]/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold font-['Poppins'] text-[#0F2A44] mb-4">Best Ironing Services</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Professional ironing services with FREE pickup & delivery. Starting @ ₹7 only!
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                <!-- Ironing Price Preview -->
-                <div class="bg-white rounded-xl p-6 shadow-lg">
-                    <h4 class="text-lg font-bold text-[#0F2A44] mb-4 text-center">Starting @ ₹7</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li class="flex justify-between"><span>Shirts/T-Shirts</span><span class="font-semibold text-[#3cc9e8]">₹7</span></li>
-                        <li class="flex justify-between"><span>Trousers/Jeans</span><span class="font-semibold text-[#3cc9e8]">₹7</span></li>
-                        <li class="flex justify-between"><span>Kurta/Kurti</span><span class="font-semibold text-[#3cc9e8]">₹7</span></li>
-                        <li class="flex justify-between"><span>Dhoti</span><span class="font-semibold text-[#3cc9e8]">₹21</span></li>
-                    </ul>
-                </div>
-
-                <!-- Features -->
-                <div class="bg-white rounded-xl p-6 shadow-lg">
-                    <h4 class="text-lg font-bold text-[#0F2A44] mb-4 text-center">Features</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Free Pickup & Delivery</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>24/7 Service</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Professional Ironing</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Quality Guarantee</li>
-                    </ul>
-                </div>
-
-                <!-- Monthly Plan -->
-                <div class="bg-white rounded-xl p-6 shadow-lg">
-                    <h4 class="text-lg font-bold text-[#0F2A44] mb-4 text-center">Monthly Plan</h4>
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-[#3cc9e8] mb-2">₹500/-</div>
-                        <div class="text-sm text-gray-600 mb-2">Per Month</div>
-                        <div class="text-lg font-semibold text-[#0F2A44]">70 Clothes</div>
-                    </div>
-                </div>
-
-                <!-- CTA -->
-                <div class="bg-white rounded-xl p-6 shadow-lg flex flex-col justify-center items-center">
-                    <h4 class="text-lg font-bold text-[#0F2A44] mb-4 text-center">More Details</h4>
-                    <a href="pricing.html#ironing-services" class="bg-gradient-to-r from-[#3cc9e8] to-[#2ea8c0] text-white px-6 py-3 rounded-lg font-semibold hover:from-[#2ea8c0] hover:to-[#1a7a8f] transition-all duration-300 transform hover:scale-105">
-                        View Pricing
-                    </a>
-                    <p class="text-xs text-gray-500 mt-2 text-center">Complete price list & plans</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- CTA Section -->
     <section class="py-20 bg-[#0F2A44] text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -814,7 +987,7 @@
                 <a href="contact.html" class="bg-[#3cc9e8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#2ea8c0] transition-colors">
                     Contact Us
                 </a>
-                <a href="https://wa.me/919220400344" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#0F2A44] transition-colors">
+                <a href="https://wa.me/919220400344" class="border-2 border-white text-green-500 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-500 hover:text-white transition-colors">
                     WhatsApp Now
                 </a>
             </div>
@@ -829,12 +1002,18 @@
                 <div>
                     <img src="assets/tide logo.jpeg" alt="Tidee Logo" class="h-12 mb-4">
                     <p class="text-gray-400 mb-4">
-                        Premium dry clean & laundry service committed to hygiene, quality and convenience.
+                        Trusted Dry Clean & Laundry Service Near You – Free Pickup & Delivery
                     </p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-[#3cc9e8] transition-colors">Facebook</a>
-                        <a href="#" class="text-gray-400 hover:text-[#3cc9e8] transition-colors">Instagram</a>
-                        <a href="#" class="text-gray-400 hover:text-[#3cc9e8] transition-colors">Twitter</a>
+                        <a href="#" class="text-gray-400 hover:text-[#3cc9e8] transition-colors">
+                            <i class="ri-facebook-fill text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#3cc9e8] transition-colors">
+                            <i class="ri-instagram-fill text-xl"></i>
+                        </a>
+                        <a href="https://wa.me/919220400344" class="text-gray-400 hover:text-[#3cc9e8] transition-colors">
+                            <i class="ri-whatsapp-fill text-xl"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -842,6 +1021,7 @@
                 <div>
                     <h4 class="font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
                         <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
                         <li><a href="pricing.html" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
                         <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
@@ -870,6 +1050,7 @@
                         <li><a href="pricing.html#woolen" class="text-gray-400 hover:text-white transition-colors">Woolen Pricing</a></li>
                         <li><a href="pricing.html#household" class="text-gray-400 hover:text-white transition-colors">Household Pricing</a></li>
                         <li><a href="pricing.html" class="text-gray-400 hover:text-white transition-colors">Full Price List</a></li>
+                        <li><a href="pricing.html#ironing-services" class="text-gray-400 hover:text-white transition-colors">Affordable Iron</a></li>
                     </ul>
                 </div>
 
@@ -877,9 +1058,9 @@
                 <div>
                     <h4 class="font-semibold mb-4">Contact Us</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li>📞 +91-9876543210</li>
-                        <li>📧 support@tidee.in</li>
-                        <li>📍 A-61, Sec-122, Noida</li>
+                        <li><i class="ri-phone-line"></i> +91 9220400344</li>
+                        <li><i class="ri-mail-line"></i> support@tidee.in</li>
+                        <li><i class="ri-map-pin-line"></i> A-61, Sec-122, Noida</li>
                     </ul>
                 </div>
             </div>
@@ -989,6 +1170,279 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Weekly Subscription Modal -->
+    <div id="weekly-subscription-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-xl p-8 max-w-lg w-full max-h-[90vh] overflow-y-auto">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold font-['Poppins'] text-[#0F2A44]">Weekly Subscription Plan</h3>
+                    <button onclick="closeWeeklySubscriptionModal()" class="text-gray-400 hover:text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="mb-6">
+                    <div class="bg-blue-50 rounded-lg p-4 mb-4">
+                        <h4 class="font-semibold text-[#0F2A44] mb-2">Plan Details:</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>• Up to 25 clothes per week</li>
+                            <li>• Wash & Fold, Wash & Iron, Steam Ironing</li>
+                            <li>• Limited Dry Cleaning (optional add-on)</li>
+                            <li>• Price: ₹499/week</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-4 mb-4">
+                        <div class="flex items-center mb-2">
+                            <i class="ri-lock-line text-red-500 mr-2"></i>
+                            <span class="font-semibold text-red-700">Payment Required: ₹499 (100% Advance)</span>
+                        </div>
+                        <p class="text-sm text-red-600">Payment must be made to activate your weekly subscription plan.</p>
+                    </div>
+                </div>
+
+                <form class="space-y-5" id="weekly-subscription-form">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                        <input type="text" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-colors" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Mobile Number *</label>
+                        <input type="tel" name="mobile" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-colors" placeholder="Enter your mobile number" required>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Email (Optional)</label>
+                        <input type="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-colors" placeholder="Enter your email">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Address *</label>
+                        <textarea name="address" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-colors resize-none" placeholder="Enter your complete address" required></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Pickup Day *</label>
+                        <select name="pickup_day" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-colors" required>
+                            <option value="">Select pickup day</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                        </select>
+                    </div>
+
+                    <div class="bg-yellow-50 rounded-lg p-4 mb-4">
+                        <p class="text-sm text-yellow-800">
+                            <strong>Note:</strong> Your subscription will start from the next selected pickup day. You can pause/cancel anytime with 7 days notice.
+                        </p>
+                    </div>
+
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-gradient-to-r from-[#3cc9e8] to-[#2ea8c0] text-white py-3 px-6 rounded-lg font-semibold text-base hover:from-[#2ea8c0] hover:to-[#1a7a8f] hover:scale-105 hover:shadow-xl hover:shadow-[#3cc9e8]/50 transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:ring-offset-2">
+                            Confirm Weekly Subscription
+                        </button>
+                    </div>
+
+                    <div id="weekly-message" class="hidden p-4 rounded-lg"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Monthly Subscription Modal -->
+    <div id="monthly-subscription-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-xl p-8 max-w-lg w-full max-h-[90vh] overflow-y-auto">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold font-['Poppins'] text-[#0F2A44]">Monthly Subscription Plan</h3>
+                    <button onclick="closeMonthlySubscriptionModal()" class="text-gray-400 hover:text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="mb-6">
+                    <div class="bg-green-50 rounded-lg p-4 mb-4">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold mr-2">🟢 MOST POPULAR</span>
+                        </div>
+                        <h4 class="font-semibold text-[#0F2A44] mb-2">Plan Details:</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>• Up to 100 clothes per month</li>
+                            <li>• Wash & Fold, Wash & Iron, Steam Ironing</li>
+                            <li>• Dry Cleaning (limited items)</li>
+                            <li>• Free pickup & delivery</li>
+                            <li>• Price: ₹1,799/month</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-4">
+                        <div class="flex items-center mb-2">
+                            <i class="ri-lock-line text-yellow-600 mr-2"></i>
+                            <span class="font-semibold text-yellow-700">Payment Required: ₹899.50 (50% Advance)</span>
+                        </div>
+                        <p class="text-sm text-yellow-700">Remaining ₹899.50 to be paid mid-month. Flexible payment option available.</p>
+                    </div>
+                </div>
+
+                <form class="space-y-5" id="monthly-subscription-form">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                        <input type="text" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-colors" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Mobile Number *</label>
+                        <input type="tel" name="mobile" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-colors" placeholder="Enter your mobile number" required>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Email (Optional)</label>
+                        <input type="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-colors" placeholder="Enter your email">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Address *</label>
+                        <textarea name="address" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-colors resize-none" placeholder="Enter your complete address" required></textarea>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Start Date *</label>
+                            <input type="date" name="start_date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-colors" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Pickup Frequency *</label>
+                            <select name="pickup_frequency" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-colors" required>
+                                <option value="">Select frequency</option>
+                                <option value="weekly">Weekly</option>
+                                <option value="bi-weekly">Bi-weekly</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 rounded-lg p-4 mb-4">
+                        <p class="text-sm text-blue-800">
+                            <strong>Note:</strong> Monthly billing starts from your selected date. You can upgrade/downgrade anytime. 15 days notice required for cancellation.
+                        </p>
+                    </div>
+
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-gradient-to-r from-[#3cc9e8] to-[#2ea8c0] text-white py-3 px-6 rounded-lg font-semibold text-base hover:from-[#2ea8c0] hover:to-[#1a7a8f] hover:scale-105 hover:shadow-xl hover:shadow-[#3cc9e8]/50 transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:ring-offset-2">
+                            Confirm Monthly Subscription
+                        </button>
+                    </div>
+
+                    <div id="monthly-message" class="hidden p-4 rounded-lg"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Yearly Subscription Modal -->
+    <div id="yearly-subscription-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-xl p-8 max-w-lg w-full max-h-[90vh] overflow-y-auto">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold font-['Poppins'] text-[#0F2A44]">Yearly Subscription Plan</h3>
+                    <button onclick="closeYearlySubscriptionModal()" class="text-gray-400 hover:text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="mb-6">
+                    <div class="bg-purple-50 rounded-lg p-4 mb-4">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold mr-2">💎 MAXIMUM SAVINGS</span>
+                        </div>
+                        <h4 class="font-semibold text-[#0F2A44] mb-2">Plan Details:</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>• Up to 1200 clothes per year</li>
+                            <li>• All laundry services included</li>
+                            <li>• Priority pickup & delivery</li>
+                            <li>• Free stain removal (limited)</li>
+                            <li>• Discounted dry cleaning rates</li>
+                            <li>• Price: ₹18,999/year (Save 20%)</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
+                        <div class="flex items-center mb-2">
+                            <i class="ri-lock-line text-blue-600 mr-2"></i>
+                            <span class="font-semibold text-blue-700">Payment Required: ₹9,499.50 (50% Advance)</span>
+                        </div>
+                        <p class="text-sm text-blue-700">Remaining amount payable in easy quarterly installments of ₹3,166.50 each.</p>
+                    </div>
+                </div>
+
+                <form class="space-y-5" id="yearly-subscription-form">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                        <input type="text" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-colors" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Mobile Number *</label>
+                        <input type="tel" name="mobile" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-colors" placeholder="Enter your mobile number" required>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                        <input type="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-colors" placeholder="Enter your email for billing" required>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Address *</label>
+                        <textarea name="address" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-colors resize-none" placeholder="Enter your complete address" required></textarea>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Start Date *</label>
+                            <input type="date" name="start_date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-colors" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Pickup Frequency *</label>
+                            <select name="pickup_frequency" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-colors" required>
+                                <option value="">Select frequency</option>
+                                <option value="weekly">Weekly</option>
+                                <option value="bi-weekly">Bi-weekly</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Company Name (Optional)</label>
+                        <input type="text" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-colors" placeholder="For corporate accounts">
+                    </div>
+
+                    <div class="bg-green-50 rounded-lg p-4 mb-4">
+                        <p class="text-sm text-green-800">
+                            <strong>Note:</strong> Annual plan offers maximum savings! Quarterly payments for easy cash flow. 30 days notice required for cancellation. Perfect for families and corporate accounts.
+                        </p>
+                    </div>
+
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-gradient-to-r from-[#3cc9e8] to-[#2ea8c0] text-white py-3 px-6 rounded-lg font-semibold text-base hover:from-[#2ea8c0] hover:to-[#1a7a8f] hover:scale-105 hover:shadow-xl hover:shadow-[#3cc9e8]/50 transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:ring-offset-2">
+                            Confirm Yearly Subscription & Save 20%
+                        </button>
+                    </div>
+
+                    <div id="yearly-message" class="hidden p-4 rounded-lg"></div>
+                </form>
             </div>
         </div>
     </div>
