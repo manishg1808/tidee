@@ -86,13 +86,212 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="bg-gradient-to-r from-[#0F2A44] to-[#1a4a6a] text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold font-['Poppins'] mb-4">Contact Us</h1>
-                <p class="text-xl text-gray-200 max-w-3xl mx-auto">
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Parallax Background Image -->
+        <div class="absolute inset-0 contact-parallax-bg" style="background-image: url('assets/1.jpg');">
+            <!-- Dark Overlay for better text readability -->
+            <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70"></div>
+            <!-- Additional gradient overlay -->
+            <div class="absolute inset-0 bg-gradient-to-br from-[#0F2A44]/30 to-[#1a4a6a]/30"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <div class="mb-8">
+                <h1 class="text-5xl md:text-7xl font-bold font-['Poppins'] mb-6">
+                    Contact Us
+                </h1>
+                <p class="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
                     Get in touch with us for all your laundry and dry cleaning needs. We're here to help you look your best.
                 </p>
+            </div>
+
+            <!-- Quick Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-8 justify-center items-center mt-16">
+                <!-- Call Button -->
+                <a href="tel:+919220400344" class="group relative bg-gradient-to-r from-[#3cc9e8] via-[#2ea8c0] to-[#1a7a8f] text-white px-6 py-3 rounded-2xl font-bold text-base hover:from-[#2ea8c0] hover:via-[#1a7a8f] hover:to-[#0e5a6f] hover:scale-110 hover:shadow-2xl hover:shadow-[#3cc9e8]/60 transition-all duration-500 transform flex items-center gap-3 overflow-hidden">
+                    <!-- Animated background glow -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-[#3cc9e8] to-[#2ea8c0] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
+
+                    <!-- Button content -->
+                    <div class="relative z-10 flex items-center gap-4">
+                        <div class="bg-white/20 p-1.5 rounded-lg group-hover:bg-white/30 transition-all duration-300">
+                            <i class="ri-phone-line text-xl group-hover:animate-bounce"></i>
+                        </div>
+                        <div class="text-left">
+                            <div class="font-bold text-base">Call Now</div>
+                            <div class="text-sm opacity-90">+91 9220400344</div>
+                        </div>
+                    </div>
+
+                    <!-- Hover arrow -->
+                    <div class="absolute right-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300">
+                        <i class="ri-arrow-right-line text-lg"></i>
+                    </div>
+                </a>
+
+                <!-- WhatsApp Button -->
+                <a href="https://wa.me/919220400344" class="group relative bg-gradient-to-r from-green-500 via-green-600 to-green-700 text-white px-6 py-3 rounded-2xl font-bold text-base hover:from-green-600 hover:via-green-700 hover:to-green-800 hover:scale-110 hover:shadow-2xl hover:shadow-green-500/60 transition-all duration-500 transform flex items-center gap-3 overflow-hidden">
+                    <!-- Animated background glow -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-green-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
+
+                    <!-- Button content -->
+                    <div class="relative z-10 flex items-center gap-4">
+                        <div class="bg-white/20 p-1.5 rounded-lg group-hover:bg-white/30 transition-all duration-300">
+                            <i class="ri-whatsapp-line text-xl group-hover:animate-bounce"></i>
+                        </div>
+                        <div class="text-left">
+                            <div class="font-bold text-base">WhatsApp</div>
+                            <div class="text-sm opacity-90">Quick Chat</div>
+                        </div>
+                    </div>
+
+                    <!-- Hover arrow -->
+                    <div class="absolute right-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300">
+                        <i class="ri-arrow-right-line text-lg"></i>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Multiple Ways to Reach Us -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-['Poppins'] text-[#0F2A44] mb-6">
+                    Multiple Ways to Reach Us
+                </h2>
+                <p class="text-l text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                    Choose the most convenient way to connect with Tidee. Our team is always ready to assist you with bookings, support and queries.
+                </p>
+            </div>
+
+            <!-- Contact Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Call Us Card -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                    <div class="flex flex-col items-center text-center">
+                        <!-- Icon -->
+                        <div class="p-4 mb-6">
+                            <i class="ri-phone-line text-3xl text-[#3cc9e8]"></i>
+                        </div>
+
+                        <!-- Title -->
+                        <h3 class="text-2xl font-bold text-[#0F2A44] mb-4">Call Us</h3>
+
+                        <!-- Contact Details -->
+                        <div class="w-full space-y-3">
+                            <div class="flex items-center justify-center gap-2 text-gray-700">
+                                <i class="ri-phone-line text-lg text-[#3cc9e8]"></i>
+                                <span class="font-semibold">+91 9220400344</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <i class="ri-time-line mr-2"></i>
+                                Mon – Sun, 8:00 AM – 10:00 PM
+                            </div>
+                        </div>
+
+                        <!-- CTA Button -->
+                        <a href="tel:+919220400344" class="mt-6 bg-[#3cc9e8] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#2ea8c0] transition-colors inline-flex items-center gap-2">
+                            <i class="ri-phone-line"></i>
+                            Call Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Card -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                    <div class="flex flex-col items-center text-center">
+                        <!-- Icon -->
+                        <div class="p-4 mb-6">
+                            <i class="ri-whatsapp-line text-3xl text-green-500"></i>
+                        </div>
+
+                        <!-- Title -->
+                        <h3 class="text-2xl font-bold text-green-600 mb-4">WhatsApp</h3>
+
+                        <!-- Contact Details -->
+                        <div class="w-full space-y-3">
+                            <div class="flex items-center justify-center gap-2 text-gray-700">
+                                <i class="ri-whatsapp-line text-lg text-green-500"></i>
+                                <span class="font-semibold">+91 9220400344</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <i class="ri-time-line mr-2"></i>
+                                24/7 Support
+                            </div>
+                        </div>
+
+                        <!-- CTA Button -->
+                        <a href="https://wa.me/919220400344" class="mt-10 bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors inline-flex items-center gap-2">
+                            <i class="ri-whatsapp-line"></i>
+                            WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Email Us Card -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                    <div class="flex flex-col items-center text-center">
+                        <!-- Icon -->
+                        <div class="p-4 mb-6">
+                            <i class="ri-mail-line text-3xl text-[#0F2A44]"></i>
+                        </div>
+
+                        <!-- Title -->
+                        <h3 class="text-2xl font-bold text-[#0F2A44] mb-4">Email Us</h3>
+
+                        <!-- Contact Details -->
+                        <div class="w-full space-y-3">
+                            <div class="flex items-center justify-center gap-2 text-gray-700">
+                                <i class="ri-mail-line text-lg text-[#0F2A44]"></i>
+                                <span class="font-semibold">support@tidee.in</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <i class="ri-time-line mr-2"></i>
+                                Response Time: Within 24 hours
+                            </div>
+                        </div>
+
+                        <!-- CTA Button -->
+                        <a href="mailto:support@tidee.in" class="mt-6 bg-[#0F2A44] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#1a4a6a] transition-colors inline-flex items-center gap-2">
+                            <i class="ri-mail-line"></i>
+                            Email Us
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Visit Us Card -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                    <div class="flex flex-col items-center text-center">
+                        <!-- Icon -->
+                        <div class="p-4 mb-6">
+                            <i class="ri-map-pin-line text-3xl text-[#3cc9e8]"></i>
+                        </div>
+
+                        <!-- Title -->
+                        <h3 class="text-2xl font-bold text-[#0F2A44] mb-4">Visit Us</h3>
+
+                        <!-- Contact Details -->
+                        <div class="w-full space-y-3">
+                            <div class="text-gray-700 text-sm leading-relaxed">
+                                <div class="font-semibold mb-2">Address:</div>
+                                A-61, Sector-122, Noida<br>
+                                Uttar Pradesh, India
+                            </div>
+                        </div>
+
+                        <!-- CTA Button -->
+                        <a href="https://maps.google.com/?q=A-61,+Sector-122,+Noida,+Uttar+Pradesh,+India" target="_blank" class="mt-6 bg-[#3cc9e8] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#2ea8c0] transition-colors inline-flex items-center gap-2">
+                            <i class="ri-map-pin-line"></i>
+                            Get Directions
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -105,141 +304,181 @@
                 <div>
                     <h2 class="text-3xl md:text-4xl font-bold font-['Poppins'] text-[#0F2A44] mb-8">Get In Touch</h2>
 
-                    <div class="space-y-8">
-                        <!-- Phone -->
-                        <div class="flex items-start">
-                            <div class="bg-[#3cc9e8] text-white p-4 rounded-lg mr-6">
-                                <i class="ri-phone-line text-2xl text-white"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-[#0F2A44] mb-2">Call Us</h3>
-                                <p class="text-gray-600 mb-2">Speak directly with our customer service team</p>
-                                <p class="text-lg font-semibold text-[#0F2A44]">+91-9220400344/p>
-                                <p class="text-sm text-gray-500">Mon-sun: 8:00 AM - 10:00 PM</p>
+                    <!-- Contact Cards Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                        <!-- Call Us Card -->
+                        <div class="bg-gradient-to-br from-[#3cc9e8]/10 to-[#3cc9e8]/5 p-6 rounded-2xl border border-[#3cc9e8]/20 hover:shadow-lg transition-all duration-300">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-[#3cc9e8] text-white p-3 rounded-xl flex-shrink-0">
+                                    <i class="ri-phone-line text-xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-lg font-bold text-[#0F2A44] mb-2">Call Us</h3>
+                                    <p class="text-gray-600 mb-3 text-sm">Speak directly with our customer service team</p>
+                                    <p class="text-lg font-semibold text-[#0F2A44] mb-1">+91 9220400344</p>
+                                    <p class="text-sm text-gray-500">Mon-Sun: 8:00 AM - 10:00 PM</p>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Email -->
-                        <div class="flex items-start">
-                            <div class="bg-[#0F2A44] text-white p-4 rounded-lg mr-6">
-                                <i class="ri-mail-line text-2xl text-white"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-[#0F2A44] mb-2">Email Us</h3>
-                                <p class="text-gray-600 mb-2">Send us your queries and feedback</p>
-                                <p class="text-lg font-semibold text-[#0F2A44]">support@tidee.in</p>
-                                <p class="text-sm text-gray-500">We respond within 24 hours</p>
-                            </div>
-                        </div>
-
-                        <!-- WhatsApp -->
-                        <div class="flex items-start">
-                            <div class="bg-green-500 text-white p-4 rounded-lg mr-6">
-                                <div class="text-2xl">💬</div>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-green-600 mb-2">WhatsApp</h3>
-                                <p class="text-gray-600 mb-2">Quick responses and instant booking</p>
-                                <p class="text-lg font-semibold text-[#0F2A44]">+91 9220400344</p>
-                                <p class="text-sm text-gray-500">Available 24/7</p>
+                        <!-- Email Us Card -->
+                        <div class="bg-gradient-to-br from-[#0F2A44]/10 to-[#0F2A44]/5 p-6 rounded-2xl border border-[#0F2A44]/20 hover:shadow-lg transition-all duration-300">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-[#0F2A44] text-white p-3 rounded-xl flex-shrink-0">
+                                    <i class="ri-mail-line text-xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-lg font-bold text-[#0F2A44] mb-2">Email Us</h3>
+                                    <p class="text-gray-600 mb-3 text-sm">Send us your queries and feedback</p>
+                                    <p class="text-lg font-semibold text-[#0F2A44] mb-1">support@tidee.in</p>
+                                    <p class="text-sm text-gray-500">We respond within 24 hours</p>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Address -->
-                        <div class="flex items-start">
-                            <div class="bg-[#3cc9e8] text-white p-4 rounded-lg mr-6">
-                                <i class="ri-map-pin-line text-2xl text-white"></i>
+                        <!-- WhatsApp Card -->
+                        <div class="bg-gradient-to-br from-green-500/10 to-green-500/5 p-6 rounded-2xl border border-green-500/20 hover:shadow-lg transition-all duration-300">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-green-500 text-white p-3 rounded-xl flex-shrink-0">
+                                    <i class="ri-whatsapp-line text-xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-lg font-bold text-green-600 mb-2">WhatsApp</h3>
+                                    <p class="text-gray-600 mb-3 text-sm">Quick responses and instant booking</p>
+                                    <p class="text-lg font-semibold text-[#0F2A44] mb-1">+91 9220400344</p>
+                                    <p class="text-sm text-gray-500">Available 24/7</p>
+                                </div>
                             </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-[#0F2A44] mb-2">Visit Us</h3>
-                                <p class="text-gray-600 mb-2">Our main office and pickup point</p>
-                                <p class="text-lg font-semibold text-[#0F2A44]">123 Laundry Street</p>
-                                <p class="text-lg font-semibold text-[#0F2A44]">Andheri West, Mumbai - 400058</p>
-                                <p class="text-sm text-gray-500">Maharashtra, India</p>
+                        </div>
+
+                        <!-- Visit Us Card -->
+                        <div class="bg-gradient-to-br from-[#3cc9e8]/10 to-[#3cc9e8]/5 p-6 rounded-2xl border border-[#3cc9e8]/20 hover:shadow-lg transition-all duration-300">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-[#3cc9e8] text-white p-3 rounded-xl flex-shrink-0">
+                                    <i class="ri-map-pin-line text-xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-lg font-bold text-[#0F2A44] mb-2">Visit Us</h3>
+                                    <p class="text-gray-600 mb-3 text-sm">Our main office and pickup point</p>
+                                    <div class="text-sm text-[#0F2A44]">
+                                        <p class="font-semibold">A-61, Sec-122, Noida</p>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Find Us Heading -->
+                    <h3 class="text-2xl font-bold text-[#0F2A44] mt-8 mb-4 text-center">Find Us</h3>
+
+                    <!-- Location Map Container -->
+                    <div>
+                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56093.04975145625!2d77.2837036486328!3d28.51519490000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce7be0a98b97f%3A0x9019ff85844249cc!2sTidee%20Services!5e0!3m2!1sen!2sin!4v1768345121297!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
 
-                    <!-- Service Areas -->
-                    <div class="mt-12">
-                        <h3 class="text-xl font-bold text-[#0F2A44] mb-4">Service Areas</h3>
-                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                            <div class="bg-gray-50 rounded-lg p-4 text-center">
-                                <p class="font-medium text-[#0F2A44]">Andheri</p>
-                            </div>
-                            <div class="bg-gray-50 rounded-lg p-4 text-center">
-                                <p class="font-medium text-[#0F2A44]">Bandra</p>
-                            </div>
-                            <div class="bg-gray-50 rounded-lg p-4 text-center">
-                                <p class="font-medium text-[#0F2A44]">Juhu</p>
-                            </div>
-                            <div class="bg-gray-50 rounded-lg p-4 text-center">
-                                <p class="font-medium text-[#0F2A44]">Powai</p>
-                            </div>
-                            <div class="bg-gray-50 rounded-lg p-4 text-center">
-                                <p class="font-medium text-[#0F2A44]">Goregaon</p>
-                            </div>
-                            <div class="bg-gray-50 rounded-lg p-4 text-center">
-                                <p class="font-medium text-[#0F2A44]">Malad</p>
-                            </div>
-                        </div>
-                        <p class="text-sm text-gray-500 mt-4">* Additional charges may apply for areas outside Mumbai</p>
-                    </div>
                 </div>
 
                 <!-- Contact Form -->
                 <div>
-                    <div class="bg-gray-50 rounded-xl p-8">
-                        <h3 class="text-2xl font-bold font-['Poppins'] text-[#0F2A44] mb-6">Send us a Message</h3>
+                    <div class="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-lg border border-gray-100">
+                        <div class="text-center mb-8">
+                            <h3 class="text-3xl font-bold font-['Poppins'] text-[#0F2A44] mb-3">Send us a Message</h3>
+                            <p class="text-gray-600">We'd love to hear from you. Fill out the form below and we'll get back to you soon.</p>
+                        </div>
 
                         <form class="contact-form space-y-6">
+                            <!-- Name Fields -->
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                                    <input type="text" name="firstName" class="form-input" required>
+                                <div class="relative">
+                                    <label class="block text-sm font-semibold text-[#0F2A44] mb-2">First Name</label>
+                                    <div class="relative">
+                                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                            <i class="ri-user-line text-gray-400"></i>
+                                        </div>
+                                        <input type="text" name="firstName" class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-all duration-200 bg-white hover:border-[#3cc9e8]" required>
+                                    </div>
                                 </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                                    <input type="text" name="lastName" class="form-input">
+                                <div class="relative">
+                                    <label class="block text-sm font-semibold text-[#0F2A44] mb-2">Last Name</label>
+                                    <div class="relative">
+                                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                            <i class="ri-user-line text-gray-400"></i>
+                                        </div>
+                                        <input type="text" name="lastName" class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-all duration-200 bg-white hover:border-[#3cc9e8]">
+                                    </div>
                                 </div>
                             </div>
 
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                                <input type="email" name="email" class="form-input" required>
+                            <!-- Email Field -->
+                            <div class="relative">
+                                <label class="block text-sm font-semibold text-[#0F2A44] mb-2">Email Address</label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                        <i class="ri-mail-line text-gray-400"></i>
+                                    </div>
+                                    <input type="email" name="email" class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-all duration-200 bg-white hover:border-[#3cc9e8]" required>
+                                </div>
                             </div>
 
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                                <input type="tel" name="phone" class="form-input" required>
+                            <!-- Phone Field -->
+                            <div class="relative">
+                                <label class="block text-sm font-semibold text-[#0F2A44] mb-2">Phone Number</label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                        <i class="ri-phone-line text-gray-400"></i>
+                                    </div>
+                                    <input type="tel" name="phone" class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-all duration-200 bg-white hover:border-[#3cc9e8]" required>
+                                </div>
                             </div>
 
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
-                                <select name="subject" class="form-input" required>
-                                    <option value="">Select a subject</option>
-                                    <option value="general">General Inquiry</option>
-                                    <option value="booking">Service Booking</option>
-                                    <option value="complaint">Complaint</option>
-                                    <option value="feedback">Feedback</option>
-                                    <option value="business">Business Partnership</option>
-                                    <option value="other">Other</option>
-                                </select>
+                            <!-- Subject Field -->
+                            <div class="relative">
+                                <label class="block text-sm font-semibold text-[#0F2A44] mb-2">Subject</label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                        <i class="ri-file-text-line text-gray-400"></i>
+                                    </div>
+                                    <select name="subject" class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-all duration-200 bg-white hover:border-[#3cc9e8] appearance-none" required>
+                                        <option value="">Select a subject</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="booking">Service Booking</option>
+                                        <option value="complaint">Complaint</option>
+                                        <option value="feedback">Feedback</option>
+                                        <option value="business">Business Partnership</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
+                                        <i class="ri-arrow-down-s-line text-gray-400"></i>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                                <textarea name="message" rows="5" class="form-input" placeholder="Tell us how we can help you..." required></textarea>
+                            <!-- Message Field -->
+                            <div class="relative">
+                                <label class="block text-sm font-semibold text-[#0F2A44] mb-2">Message</label>
+                                <div class="relative">
+                                    <div class="absolute top-3 left-4 pointer-events-none">
+                                        <i class="ri-message-line text-gray-400"></i>
+                                    </div>
+                                    <textarea name="message" rows="5" class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:border-transparent transition-all duration-200 bg-white hover:border-[#3cc9e8] resize-none" placeholder="Tell us how we can help you..." required></textarea>
+                                </div>
                             </div>
 
-                            <div class="flex items-start">
-                                <input type="checkbox" id="newsletter" name="newsletter" class="mt-1 mr-3">
-                                <label for="newsletter" class="text-sm text-gray-600">
-                                    Subscribe to our newsletter for updates on services and offers
+                            <!-- Newsletter Checkbox -->
+                            <div class="flex items-start space-x-3 bg-gray-50 p-4 rounded-xl">
+                                <input type="checkbox" id="newsletter" name="newsletter" class="mt-1 w-4 h-4 text-[#3cc9e8] border-gray-300 rounded focus:ring-[#3cc9e8] focus:ring-2">
+                                <label for="newsletter" class="text-sm text-gray-700 leading-relaxed">
+                                    <span class="font-medium">Subscribe to our newsletter</span> for updates on services and offers
                                 </label>
                             </div>
 
-                            <button type="submit" class="w-full bg-[#3cc9e8] text-white py-4 rounded-lg font-semibold text-lg hover:bg-[#2ea8c0] transition-colors">
+                            <!-- Submit Button -->
+                            <button type="submit" class="w-full bg-gradient-to-r from-[#3cc9e8] to-[#2ea8c0] text-white py-4 px-6 rounded-xl font-bold text-lg hover:from-[#2ea8c0] hover:to-[#1a7a8f] hover:scale-105 hover:shadow-xl hover:shadow-[#3cc9e8]/50 transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-[#3cc9e8] focus:ring-offset-2 flex items-center justify-center gap-2">
+                                <i class="ri-send-plane-line"></i>
                                 Send Message
                             </button>
                         </form>
@@ -249,115 +488,8 @@
         </div>
     </section>
 
-    <!-- Google Maps -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold font-['Poppins'] text-[#0F2A44] mb-4">Find Us</h2>
-                <p class="text-lg text-gray-600">Visit our office or schedule a pickup</p>
-            </div>
-
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <!-- Map Container -->
-                <div class="h-96 bg-gray-200 relative">
-                    <!-- Placeholder for Google Maps -->
-                    <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#0F2A44] to-[#1a4a6a] text-white">
-                        <div class="text-center">
-                            <i class="ri-map-pin-line text-6xl mb-4 text-white"></i>
-                            <h3 class="text-2xl font-bold mb-2">Tidee Office</h3>
-                            <p class="text-lg">123 Laundry Street, Andheri West</p>
-                            <p class="text-lg">Mumbai - 400058, Maharashtra</p>
-                            <div class="mt-6">
-                                <a href="https://maps.google.com/?q=123+Laundry+Street,+Andheri+West,+Mumbai" target="_blank" class="bg-[#3cc9e8] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#2ea8c0] transition-colors">
-                                    Get Directions
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Google Maps Integration (Replace with actual API key and coordinates) -->
-                    <!--
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.5!2d72.8!3d19.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA2JzAwLjAiTiA3MsKwNDgnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-                    </iframe>
-                    -->
-                </div>
-
-                <!-- Location Details -->
-                <div class="p-8">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div class="text-center">
-                            <div class="text-4xl mb-4">🏢</div>
-                            <h3 class="text-xl font-bold text-[#0F2A44] mb-2">Office Address</h3>
-                            <p class="text-gray-600">123 Laundry Street<br>Andheri West, Mumbai - 400058</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl mb-4">🕒</div>
-                            <h3 class="text-xl font-bold text-[#0F2A44] mb-2">Business Hours</h3>
-                            <p class="text-gray-600">Mon - Sat: 8:00 AM - 8:00 PM<br>Sunday: 10:00 AM - 6:00 PM</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl mb-4">🚗</div>
-                            <h3 class="text-xl font-bold text-[#0F2A44] mb-2">Pickup Service</h3>
-                            <p class="text-gray-600">Free doorstep pickup<br>within Mumbai city limits</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold font-['Poppins'] text-[#0F2A44] mb-4">Frequently Asked Questions</h2>
-                <p class="text-lg text-gray-600">Quick answers to common questions</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- FAQ Item 1 -->
-                <div class="bg-gray-50 rounded-xl p-6">
-                    <h3 class="text-lg font-bold text-[#0F2A44] mb-3">How long does it take to get my clothes back?</h3>
-                    <p class="text-gray-600">Standard service takes 24-48 hours. We also offer express service (12 hours) and same-day service for urgent needs.</p>
-                </div>
-
-                <!-- FAQ Item 2 -->
-                <div class="bg-gray-50 rounded-xl p-6">
-                    <h3 class="text-lg font-bold text-[#0F2A44] mb-3">Do you provide doorstep pickup and delivery?</h3>
-                    <p class="text-gray-600">Yes! We offer free doorstep pickup and delivery within Mumbai city limits. Additional charges apply for suburbs.</p>
-                </div>
-
-                <!-- FAQ Item 3 -->
-                <div class="bg-gray-50 rounded-xl p-6">
-                    <h3 class="text-lg font-bold text-[#0F2A44] mb-3">What if there's damage to my clothes?</h3>
-                    <p class="text-gray-600">We take full responsibility for any damage. Our quality control ensures this rarely happens, but we offer complete compensation if it does.</p>
-                </div>
-
-                <!-- FAQ Item 4 -->
-                <div class="bg-gray-50 rounded-xl p-6">
-                    <h3 class="text-lg font-bold text-[#0F2A44] mb-3">Do you offer bulk discounts?</h3>
-                    <p class="text-gray-600">Yes! We offer bulk discounts starting from 20 pieces (10% off) up to 20% off for orders over 100 pieces. Contact us for custom quotes.</p>
-                </div>
-
-                <!-- FAQ Item 5 -->
-                <div class="bg-gray-50 rounded-xl p-6">
-                    <h3 class="text-lg font-bold text-[#0F2A44] mb-3">What areas do you serve?</h3>
-                    <p class="text-gray-600">We currently serve Mumbai and surrounding areas including Andheri, Bandra, Juhu, Powai, Goregaon, and Malad.</p>
-                </div>
-
-                <!-- FAQ Item 6 -->
-                <div class="bg-gray-50 rounded-xl p-6">
-                    <h3 class="text-lg font-bold text-[#0F2A44] mb-3">Can I track my order?</h3>
-                    <p class="text-gray-600">Yes! Once your order is confirmed, you'll receive tracking updates via SMS and WhatsApp at every stage of the process.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- CTA Section -->
-    <section class="py-20 bg-[#0F2A44] text-white">
+    <section class="py-7 mb-1 bg-[#0F2A44] text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl md:text-4xl font-bold font-['Poppins'] mb-6">
                 Ready to Experience Premium Laundry Service?
@@ -521,6 +653,7 @@
                             <option value="steam-ironing">Steam Ironing</option>
                             <option value="shoe-cleaning">Shoe Cleaning</option>
                             <option value="carpet-cleaning">Carpet Cleaning</option>
+                            <option value="other">Other</option>
                         </select>
                     </div>
 

@@ -453,6 +453,26 @@ html {
   min-height: 500px;
 }
 
+/* Contact Page Parallax Background */
+.contact-parallax-bg {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Fallback for browsers that don't support background-attachment: fixed */
+@supports not (background-attachment: fixed) {
+  .contact-parallax-bg {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center top;
+  }
+}
+
 /* Pricing Page Banner Mobile Responsiveness */
 @media (max-width: 768px) {
   /* Fix pricing banner background for mobile */
