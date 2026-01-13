@@ -556,6 +556,36 @@ html {
   }
 }
 
+/* Mobile responsiveness for about story image */
+.about-story-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+}
+
+@media (max-width: 1024px) {
+  .about-story-image {
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-story-image {
+    max-height: 300px;
+    border-radius: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-story-image {
+    max-height: 250px;
+    border-radius: 0.5rem;
+  }
+}
+
 .about-banner-bg::before {
   content: '';
   position: absolute;
