@@ -605,5 +605,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Auto-popup booking modal after 5 seconds
+    const hasSeenPopup = localStorage.getItem('bookingPopupShown');
+
+    if (!hasSeenPopup) {
+        setTimeout(() => {
+            // Check if user is still on the page and modal exists
+            const bookingModal = document.getElementById('booking-modal');
+            if (bookingModal && document.visibilityState === 'visible') {
+                openBookingModal();
+                localStorage.setItem('bookingPopupShown', 'true');
+            }
+        }, 5000); // 5000ms = 5 seconds
+    }
+
+    // Function to reset popup flag (for testing purposes - can be called from console)
+    window.resetBookingPopup = function() {
+        localStorage.removeItem('bookingPopupShown');
+        console.log('Booking popup flag reset. Refresh page to test popup again.');
+    };
+
     console.log('Tidee website initialized successfully!');
 });

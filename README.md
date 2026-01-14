@@ -478,7 +478,7 @@ font-weight: 400, 500;
 
 ### 📞 Contact Page (`contact.html`) - 723 lines
 **Contact Methods:**
-- **Phone**: +91-9876543210 (click-to-call)
+- **Phone**: +91-9220400344 (click-to-call)
 - **WhatsApp**: Direct messaging integration
 - **Email**: support@tidee.in
 - **Address**: Complete business address

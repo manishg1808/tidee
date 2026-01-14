@@ -55,7 +55,7 @@
                     <button onclick="openBookingModal()" class="bg-gradient-to-r from-[#3cc9e8] to-[#2ea8c0] text-white px-3 py-1.5 rounded-md text-xs font-medium hover:from-[#2ea8c0] hover:to-[#1a7a8f] transition-all duration-300">
                         Book Pickup
                     </button>
-                    <a href="tel:+919876543210" class="bg-gradient-to-r from-[#3cc9e8] to-[#2ea8c0] text-white p-2 rounded-md hover:from-[#2ea8c0] hover:to-[#1a7a8f] transition-all duration-300">
+                    <a href="tel:+919220400344" class="bg-gradient-to-r from-[#3cc9e8] to-[#2ea8c0] text-white p-2 rounded-md hover:from-[#2ea8c0] hover:to-[#1a7a8f] transition-all duration-300">
                         <i class="ri-phone-line text-sm"></i>
                     </a>
                     <button id="mobile-menu-button" class="text-gray-600 hover:text-[#3cc9e8] p-2">
@@ -110,7 +110,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
 
                 <!-- DAILY & OFFICE WEAR -->
-                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                <div id="daily-office-wear" class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
                     <div class="flex items-center mb-4">
                         <div class="bg-[#3cc9e8] p-2 rounded-lg mr-3">
                             <i class="ri-shirt-line text-white text-xl"></i>
@@ -129,7 +129,7 @@
                 </div>
 
                 <!-- WOMEN'S WEAR -->
-                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                <div id="womens-wear" class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
                     <div class="flex items-center mb-4">
                         <div class="bg-[#3cc9e8] p-2 rounded-lg mr-3">
                             <i class="ri-women-line text-white text-xl"></i>
@@ -146,7 +146,7 @@
                 </div>
 
                 <!-- ETHNIC & TRADITIONAL WEAR -->
-                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                <div id="ethnic-traditional" class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
                     <div class="flex items-center mb-4">
                         <div class="bg-[#3cc9e8] p-2 rounded-lg mr-3">
                             <i class="ri-shining-fill text-white text-xl"></i>
@@ -168,7 +168,7 @@
                 </div>
 
                 <!-- FORMAL & PARTY WEAR -->
-                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                <div id="formal-party-wear" class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
                     <div class="flex items-center mb-4">
                         <div class="bg-[#3cc9e8] p-2 rounded-lg mr-3">
                             <i class="ri-user-star-line text-white text-xl"></i>
@@ -185,7 +185,7 @@
                 </div>
 
                 <!-- WINTER & HEAVY WEAR -->
-                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                <div id="winter-heavy-wear" class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
                     <div class="flex items-center mb-4">
                         <div class="bg-[#3cc9e8] p-2 rounded-lg mr-3">
                             <i class="ri-shirt-line text-white text-xl"></i>
@@ -202,7 +202,7 @@
                 </div>
 
                 <!-- HOME & FURNISHING ITEMS -->
-                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                <div id="home-furnishing" class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
                     <div class="flex items-center mb-4">
                         <div class="bg-[#3cc9e8] p-2 rounded-lg mr-3">
                             <i class="ri-home-line text-white text-xl"></i>
@@ -220,7 +220,7 @@
                 </div>
 
                 <!-- ACCESSORIES & SPECIAL ITEMS -->
-                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                <div id="accessories-special" class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
                     <div class="flex items-center mb-4">
                         <div class="bg-[#3cc9e8] p-2 rounded-lg mr-3">
                             <i class="ri-shopping-bag-line text-white text-xl"></i>
@@ -240,7 +240,7 @@
                 </div>
 
                 <!-- PREMIUM / SPECIAL TREATMENTS -->
-                <div class="bg-gradient-to-br from-[#0F2A44] to-[#1a4a6a] text-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                <div id="premium-treatments" class="bg-gradient-to-br from-[#0F2A44] to-[#1a4a6a] text-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
                     <div class="flex items-center mb-4">
                         <div class="bg-[#3cc9e8] p-2 rounded-lg mr-3">
                             <i class="ri-star-line text-white text-xl"></i>
@@ -288,10 +288,10 @@
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
                     Choose a flexible weekly, monthly or yearly plan with assured savings and priority service.
                 </p>
-            </div>
+            </div> 
 
             <!-- Subscription Plans Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"> 
 
                 <!-- Weekly Plan -->
                 <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-200">
@@ -335,7 +335,7 @@
                     <button onclick="openWeeklySubscriptionModal()" class="w-full bg-gradient-to-r from-[#3cc9e8] to-[#2ea8c0] text-white py-3 px-6 rounded-lg font-semibold hover:from-[#2ea8c0] hover:to-[#1a7a8f] transition-all duration-300 transform hover:scale-105">
                         👉 Subscribe Weekly
                     </button>
-                </div>
+                </div> 
 
                 <!-- Monthly Plan (Most Popular) -->
                 <div class="bg-white rounded-xl p-8 shadow-xl hover:shadow-2xl transition-shadow border-2 border-[#3cc9e8] relative">
@@ -384,10 +384,10 @@
                     <button onclick="openMonthlySubscriptionModal()" class="w-full bg-gradient-to-r from-[#3cc9e8] to-[#2ea8c0] text-white py-3 px-6 rounded-lg font-semibold hover:from-[#2ea8c0] hover:to-[#1a7a8f] transition-all duration-300 transform hover:scale-105">
                         👉 Subscribe Monthly
                     </button>
-                </div>
+                </div> 
 
                 <!-- Yearly Plan -->
-                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-200">
+                 <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-200">
                     <div class="text-center mb-6">
                         <div class="bg-[#3cc9e8] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="ri-calendar-todo-line text-white text-2xl"></i>
@@ -433,7 +433,7 @@
                         👉 Subscribe Yearly & Save More
                     </button>
                 </div>
-            </div>
+            </div> 
 
             <!-- Important Terms -->
             <div class="bg-gray-50 rounded-xl p-8">
@@ -460,7 +460,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> 
 
     <!-- Ironing Services Highlight -->
     <section class="py-20 relative overflow-hidden" style="background-image: url('assets/iron.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
@@ -1039,11 +1039,14 @@
                 <div>
                     <h4 class="font-semibold mb-4">Services</h4>
                     <ul class="space-y-2">
-                        <li><a href="services.html#mens-wear" class="text-gray-400 hover:text-white transition-colors">Men's Wear</a></li>
-                        <li><a href="services.html#womens-wear" class="text-gray-400 hover:text-white transition-colors">Women's Wear</a></li>
-                        <li><a href="services.html#woolen-wear" class="text-gray-400 hover:text-white transition-colors">Woolen Wear</a></li>
-                        <li><a href="services.html#household" class="text-gray-400 hover:text-white transition-colors">Household Items</a></li>
-                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">All Services</a></li>
+                        <li><a href="#daily-office-wear" class="text-gray-400 hover:text-white transition-colors">DAILY & OFFICE WEAR</a></li>
+                        <li><a href="#womens-wear" class="text-gray-400 hover:text-white transition-colors">WOMEN'S WEAR</a></li>
+                        <li><a href="#ethnic-traditional" class="text-gray-400 hover:text-white transition-colors">ETHNIC & TRADITIONAL</a></li>
+                        <li><a href="#formal-party-wear" class="text-gray-400 hover:text-white transition-colors">FORMAL & PARTY WEAR</a></li>
+                        <li><a href="#winter-heavy-wear" class="text-gray-400 hover:text-white transition-colors">WINTER & HEAVY WEAR</a></li>
+                        <li><a href="#home-furnishing" class="text-gray-400 hover:text-white transition-colors">HOME & FURNISHING</a></li>
+                        <li><a href="#accessories-special" class="text-gray-400 hover:text-white transition-colors">ACCESSORIES & SPECIAL</a></li>
+                        <li><a href="#premium-treatments" class="text-gray-400 hover:text-white transition-colors">PREMIUM TREATMENTS</a></li>
                     </ul>
                 </div>
 
@@ -1064,9 +1067,9 @@
                 <div>
                     <h4 class="font-semibold mb-4">Contact Us</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><i class="ri-phone-line"></i> +91 9220400344</li>
-                        <li><i class="ri-mail-line"></i> support@tidee.in</li>
-                        <li><i class="ri-map-pin-line"></i> A-61, Sec-122, Noida</li>
+                        <li><a href="tel:+919220400344" class="hover:text-white transition-colors"><i class="ri-phone-line"></i> +91 9220400344</a></li>
+                        <li><a href="mailto:support@tidee.in" class="hover:text-white transition-colors"><i class="ri-mail-line"></i> support@tidee.in</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors"><i class="ri-map-pin-line"></i> A-61, Sec-122, Noida</a></li>
                     </ul>
                 </div>
             </div>
