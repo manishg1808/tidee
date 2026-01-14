@@ -605,24 +605,43 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Auto-popup booking modal after 5 seconds
-    const hasSeenPopup = localStorage.getItem('bookingPopupShown');
+    // Auto-popup booking modal multiple times with intervals
+    let popupCount = parseInt(localStorage.getItem('bookingPopupCount') || '0');
+    const maxPopups = 2; // Show popup 2 times per session
 
-    if (!hasSeenPopup) {
+    function showPopupWithDelay(delay) {
         setTimeout(() => {
             // Check if user is still on the page and modal exists
             const bookingModal = document.getElementById('booking-modal');
-            if (bookingModal && document.visibilityState === 'visible') {
+            if (bookingModal && document.visibilityState === 'visible' && popupCount < maxPopups) {
                 openBookingModal();
-                localStorage.setItem('bookingPopupShown', 'true');
+                popupCount++;
+                localStorage.setItem('bookingPopupCount', popupCount.toString());
+                console.log(`Booking popup shown ${popupCount} time(s)`);
             }
-        }, 5000); // 5000ms = 5 seconds
+        }, delay);
     }
 
-    // Function to reset popup flag (for testing purposes - can be called from console)
+    // Show first popup after 5 seconds
+    if (popupCount < 1) {
+        showPopupWithDelay(5000); // 5 seconds
+    }
+
+    // Show second popup after another 15 seconds (20 seconds total)
+    if (popupCount < 2) {
+        showPopupWithDelay(20000); // 20 seconds total
+    }
+
+    // Function to reset popup counter (for testing purposes - can be called from console)
     window.resetBookingPopup = function() {
-        localStorage.removeItem('bookingPopupShown');
-        console.log('Booking popup flag reset. Refresh page to test popup again.');
+        localStorage.removeItem('bookingPopupCount');
+        popupCount = 0;
+        console.log('Booking popup counter reset. Refresh page to test popup again.');
+    };
+
+    // Function to check current popup count
+    window.getPopupCount = function() {
+        return parseInt(localStorage.getItem('bookingPopupCount') || '0');
     };
 
     console.log('Tidee website initialized successfully!');
